@@ -6,14 +6,15 @@ from django.http import HttpResponse, Http404, HttpResponseRedirect
 from .models import Item
 from django.urls import reverse
 from django.views import generic
-
-class ItemView(generic.ListView):
-    template_name="shiren/index.html"
-
-    def get_queryset(self):
-        return Item.objects.all()
+from .forms import ItemForm
 
 # Create your views here.
 
+def index(request):
+    form = ItemForm(request.POST)
+    print(vars(request))
+    return render(request, "shiren/index.html", {'form': form})
 
 
+def item_list(request):
+    pass
