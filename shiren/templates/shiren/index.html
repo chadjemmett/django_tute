@@ -1,7 +1,7 @@
 <h1>Hello</h1>
 
 <!-- lol doll 43319MBC -->
-<form method="post">
+<form action="{% url 'shiren:list' %}" method="post">
     {% csrf_token %}
     {{ form }}
     <input type="submit", value="Submit">
