@@ -17,19 +17,12 @@ def index(request):
 
 def list(request):
     value  = request.POST.get('price')
-    price = get_object_or_404(Price, item_price=value)
+    try:
+        price = get_object_or_404(Price, item_price=value)
+    except:
+        return render(request, "shiren/list_items.html", {})
+
     items = Item.objects.filter(price_id=price.id)
-    print(items)
-
-
-
-    print(Price)
-    # items = Price.objects.get(item_price=price)
-    # print(items)
-
-
-
-
-    context ={}
+    context ={'items': items}
     return render(request, "shiren/list_items.html", context)
 
