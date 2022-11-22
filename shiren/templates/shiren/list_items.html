@@ -1,7 +1,7 @@
-<h1>Hello</h1>
 {% if items %}
     {% for i in items %}
         {{ i }}
+        {{ i.id }}
     {% endfor %}
 {% else %}
     No items

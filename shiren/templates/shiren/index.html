@@ -1,10 +1,24 @@
-<h1>Hello</h1>
+<h1>Item Details</h1>
+{% load static %}
+<link rel="stylesheet" href="{% static 'shiren/style.css' %}">
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
 
-<!-- lol doll 43319MBC -->
+<style>
+   
+    .red_lines {border: solid red 3px;}
+   
+</style>
+
 <form action="{% url 'shiren:list' %}" method="post">
     {% csrf_token %}
-    {{ form }}
-    <input type="submit", value="Submit">
+
+    {%   bootstrap_form form  %}
+    {%  buttons submit="Check Price"  %}{% endbuttons %}
+
+    
+
 </form>
 
 
