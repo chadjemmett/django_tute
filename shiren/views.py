@@ -6,7 +6,7 @@ from django.http import HttpResponse, Http404, HttpResponseRedirect
 from .models import Item
 from django.urls import reverse
 from django.views import generic
-from .forms import ItemForm
+from .forms import ItemForm, ListForm
 
 # Create your views here.
 
@@ -16,6 +16,7 @@ def index(request):
 
 
 def list(request):
+    form = ListForm()
     value  = request.POST.get('price')
     transaction = request.POST.get('transaction')
     item_type = request.POST.get('item_type')
@@ -25,6 +26,10 @@ def list(request):
     if transaction == 'sell':
         items = Item.objects.filter(item_type=item_type).filter(sell_price=value)
 
-    context ={'items': items}
+    context ={'items': items, "form": form}
     return render(request, "shiren/list_items.html", context)
 
+
+def check(request):
+    print(request.POST)
+    pass

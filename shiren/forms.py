@@ -27,3 +27,7 @@ class ItemForm(forms.Form):
             widget=RadioSelectButtonGroup) 
 
     price = forms.IntegerField()
+
+class ListForm(forms.Form):
+    check_box = forms.BooleanField(required=False)
+
