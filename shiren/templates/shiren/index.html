@@ -5,20 +5,11 @@
 {% bootstrap_css %}
 {% bootstrap_javascript %}
 
-<style>
-   
-    .red_lines {border: solid red 3px;}
-   
-</style>
 
 <form action="{% url 'shiren:list' %}" method="post">
     {% csrf_token %}
-
     {%   bootstrap_form form  %}
     {%  buttons submit="Check Price"  %}{% endbuttons %}
-
-    
-
 </form>
 
 

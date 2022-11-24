@@ -1,8 +1,14 @@
 {% if items %}
+<div>
     {% for i in items %}
-        {{ i }}
-        {{ i.id }}
+    <ul>
+    <li>Name:  {{ i.item_name }} </li>
+    <li>buy price:  {{ i.buy_price }} </li>
+    <li>sell Price:  {{ i.sell_price }} </li>
+
+    </ul>
     {% endfor %}
+</div>
 {% else %}
     No items
 {% endif %}

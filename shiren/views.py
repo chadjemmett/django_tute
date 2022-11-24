@@ -16,14 +16,15 @@ def index(request):
 
 
 def list(request):
-    pass
-    # value  = request.POST.get('price')
-    # try:
-    #     price = get_object_or_404(Item, item_price=value)
-    # except:
-    #     return render(request, "shiren/list_items.html", {})
+    value  = request.POST.get('price')
+    transaction = request.POST.get('transaction')
+    item_type = request.POST.get('item_type')
+    print(value, transaction, item_type)
+    if transaction == 'buy':
+        items = Item.objects.filter(item_type=item_type).filter(buy_price=value)
+    if transaction == 'sell':
+        items = Item.objects.filter(item_type=item_type).filter(sell_price=value)
 
-    # items = Item.objects.filter(price_id=price.id)
-    # context ={'items': items}
-    # return render(request, "shiren/list_items.html", context)
+    context ={'items': items}
+    return render(request, "shiren/list_items.html", context)
 
