@@ -1,17 +1,18 @@
 from django.db import models
 
-class Price(models.Model):
-    item_price = models.CharField(max_length=256)
-    transaction = models.CharField(max_length=16)
-
-    def __str__(self):
-        return self.item_price
-
 class Item(models.Model):
+    TYPE = [
+            (10, 'Herb'),
+            (20, 'Scroll'),
+            (30, 'Bracelet'),
+            (40, 'Jar'),
+            (50, 'Staff'),
+            ]
     item_name = models.CharField(max_length=256)
-    item_type = models.CharField(max_length=256)
-    price_id = models.ForeignKey(Price, on_delete=models.CASCADE)
+    item_type = models.IntegerField(choices=TYPE)
+    buy_price = models.CharField(max_length=256)
+    sell_price = models.CharField(max_length=256)
 
     def __str__(self):
-        return f"{self.item_name}, {self.item_type}"
+        return f"{self.item_name}, {self.item_type}, {self.buy_price}, {self.sell_price}"
 

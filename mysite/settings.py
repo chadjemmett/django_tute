@@ -34,8 +34,8 @@ DEBUG = os.getenv("DEBUG", "False") == "True"
 
 DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
 
-ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", '127.0.0.1,localhost').split(",")
-
+# ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", '127.0.0.1,localhost').split(",")
+ALLOWED_HOSTS=[]
 
 # Application definition
 
@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bootstrap5',
+    'django_seed',
 ]
 
 MIDDLEWARE = [
@@ -90,6 +91,7 @@ if DEVELOPMENT_MODE is True:
         "default": {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'NAME': ':memory:',
                     }
 
                 }
