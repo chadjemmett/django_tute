@@ -11,12 +11,10 @@ from .forms import ItemForm, ListForm
 # Create your views here.
 
 def index(request):
-    form = ItemForm()
     return render(request, "shiren/index.html",{'form': form } )
 
 
 def list(request):
-    form = ListForm()
     value  = request.POST.get('price')
     transaction = request.POST.get('transaction')
     item_type = request.POST.get('item_type')
@@ -25,6 +23,7 @@ def list(request):
         items = Item.objects.filter(item_type=item_type).filter(buy_price=value)
     if transaction == 'sell':
         items = Item.objects.filter(item_type=item_type).filter(sell_price=value)
+    form = ListForm()
 
     context ={'items': items, "form": form}
     return render(request, "shiren/list_items.html", context)
@@ -32,4 +31,4 @@ def list(request):
 
 def check(request):
     print(request.POST)
-    pass
+    return render(request, "shiren/list_items.html", {'hello': "world"})

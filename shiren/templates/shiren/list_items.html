@@ -3,24 +3,13 @@
 {% bootstrap_css %}
 {% bootstrap_javascript %}
 <link rel="stylesheet" href="{% static 'shiren/style.css' %}">
-{% if items %}
+<form action="{% url 'shiren:check' %}" method="POST">
+     {% csrf_token %}
+{% for i in items %}
 <div>
-    {% for i in items %}
-    <form action="{% url 'shiren:check' %} method="post">
-    {% csrf_token %}
-    {%   bootstrap_form form  %}
-    <ul>
-        <li value={{ i.id }}>Name:  {{ i.item_name }} </li>
-    <li>buy price:  {{ i.buy_price }} </li>
-    <li>sell Price:  {{ i.sell_price }} </li>
-
-    </ul>
-    </form>
-    {% endfor %}
-
-    {%  buttons submit="Got these!"  %}{% endbuttons %}
+{{ i.item_name }}
+<input name={{ i.id }}  type="checkbox" >
 </div>
-{% else %}
-    No items
-{% endif %}
-
+{% endfor %}
+{% buttons type="submit" submit="check" %}{% endbuttons %}
+</form>
