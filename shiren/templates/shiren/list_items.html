@@ -6,9 +6,19 @@
 <form action="{% url 'shiren:check' %}" method="POST">
      {% csrf_token %}
 {% for i in items %}
-<div>
-{{ i.item_name }}
-<input name={{ i.id }}  type="checkbox" >
+ <div class="card text-center" style="width: 100%;">
+     {% if i.found %}
+     <h5 class="card-title alert alert-success">{{ i.item_name }}</h5>
+     {% else %}
+     <h5 class="card-title alert alert-dark">{{ i.item_name }}</h5>
+     {% endif %}
+     <p class="card-text"> Sell: {{ i.sell_price}}</p>
+     <p class="card-text"> Buy: {{ i.buy_price}}</p>
+     {% if i.found %}
+     <input style="width: 30px; height: 30px;"name="item_id"  type="checkbox" value={{ i.id }} checked >
+     {% endif %}
+
+     </div>
 </div>
 {% endfor %}
 {% buttons type="submit" submit="check" %}{% endbuttons %}

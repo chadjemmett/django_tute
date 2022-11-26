@@ -11,6 +11,7 @@ from .forms import ItemForm, ListForm
 # Create your views here.
 
 def index(request):
+    form = ItemForm()
     return render(request, "shiren/index.html",{'form': form } )
 
 
@@ -20,15 +21,26 @@ def list(request):
     item_type = request.POST.get('item_type')
     print(value, transaction, item_type)
     if transaction == 'buy':
+        print("This is checking the buying whatnot")
         items = Item.objects.filter(item_type=item_type).filter(buy_price=value)
     if transaction == 'sell':
         items = Item.objects.filter(item_type=item_type).filter(sell_price=value)
     form = ListForm()
+    print(items)
 
     context ={'items': items, "form": form}
     return render(request, "shiren/list_items.html", context)
 
 
 def check(request):
-    print(request.POST)
-    return render(request, "shiren/list_items.html", {'hello': "world"})
+    items = request.POST.getlist('item_id')
+    for i in items:
+        thing =Item.objects.get(pk=i)
+        thing.found = True
+        thing.save()
+
+    context = {'items': items}
+
+
+    
+    return render(request, "shiren/list_items.html", context)

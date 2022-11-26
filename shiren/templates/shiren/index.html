@@ -1,15 +1,27 @@
 <h1>Item Details</h1>
 {% load static %}
-<link rel="stylesheet" href="{% static 'shiren/style.css' %}">
+<head>
+{% block content %}
+<style>
+@include media-breakpoint-up(sm)) {
+    backgournd-color: lightblue;
+
+ .reddish {width: 100%; border: 3px solid red;}
+}
+</style>
+{% endblock %}
+</head>
 {% load bootstrap5 %}
 {% bootstrap_css %}
 {% bootstrap_javascript %}
 
-
-<form action="{% url 'shiren:list' %}" method="post">
+{{ static }}
+<div class="sm reddish">
+<form  action="{% url 'shiren:list' %}" method="post">
     {% csrf_token %}
     {%   bootstrap_form form  %}
     {%  buttons submit="Check Price"  %}{% endbuttons %}
 </form>
+</div>
 
 
