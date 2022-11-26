@@ -1,121 +1,121 @@
-1,10,Weeds,3,10
-2,50,Fine Grass,17,10
-3,50,Herb,17,10
-4,100,Antidote Grass,35,10
-5,100,Otogiriso,35,10
-6,100,Poison Grass,35,10
-7,100,Warp Grass,35,10
-8,200,Heal Grass,70,10
-9,300,Blinding Grass,105,10
-10,300,Confusion Grass,105,10
-11,300,Nymph Grass,105,10
-12,300,Perception Grass,105,10
-13,300,Power Up Grass,105,10
-14,300,Stomach Expander,105,10
-15,300,Stomach Shrinker,105,10
-16,300,Swift Grass,105,10
-17,300,Upgrade Seed,105,10
-18,500,Dracon Grass,175,10
-19,500,Dragon Grass,175,10
-20,500,Life Grass,175,10
-21,500,Rage Grass,175,10
-22,500,Sleepy Grass,175,10
-23,500,Strength Grass,175,10
-24,1000,Gut Grass,350,10
-25,1000,Revival Grass,350,10
-26,1500,Repeat Grass,525,10
-27,1500,Undo Grass,525,10
-28,2000,Amnesia Grass,700,10
-29,2000,Cheery Grass,700,10
-30,2000,Imabikiso,700,10
-31,2000,Invincible Grass,700,10
-32,2000,Unlucky Seed,700,10
-33,5000,Angel Seed,1750,10
-34,5000,SuperUnlucky Seed,1750,10
-35,10,Wet Scroll,3,20
-36,10,Piece of Paper,3,20
-37,100,Commend. Letter,35,20
-38,100,Escape Scroll,35,20
-39,100,Light Scroll,35,20
-40,100,Navigation Scroll,35,20
-41,100,Oil Scroll,35,20
-42,100,Recommend. Letter,35,20
-43,200,Identify Scroll,70,20
-44,300,Collection Scroll,105,20
-45,300,Gathering Scroll,105,20
-46,300,Squid Sushi Scroll,105,20
-47,500,Blessing Scroll,175,20
-48,500,Coupon Scroll,175,20
-49,500,Curse Scroll,175,20
-50,500,Darth Scroll,175,20
-51,500,Earth Scroll,175,20
-52,500,Exorcism Scroll,175,20
-53,500,Extraction Scroll,175,20
-54,500,Fate Scroll,175,20
-55,500,Mate Scroll,175,20
-56,500,Onigiri Scroll,175,20
-57,500,Plating Scroll,175,20
-58,500,Pot Dog Scroll,175,20
-59,500,Pot God Scroll,175,20
-60,500,Sale Scroll,175,20
-61,500,Tag Scroll,175,20
-62,800,Attraction Scroll,280,20
-63,800,Desert Scroll,280,20
-64,800,Fear Scroll,280,20
-65,800,Grounded Scroll,280,20
-66,800,Muzzled Scroll,280,20
-67,800,Trap Deletion Scrl,280,20
-68,800,Trap Scroll,280,20
-69,1000,Arbor Scroll,350,20
-70,1000,Confusion Scroll,350,20
-71,1000,Dispel Aura Scroll,350,20
-72,1000,Fixer Scroll,350,20
-73,1000,Gambler’s Scroll,350,20
-74,1000,Immunity Scroll,350,20
-75,1000,Mnster House Scrl,350,20
-76,1000,Night-Day Scroll,350,20
-77,1000,Nixer Scroll,350,20
-78,1000,Replenish Scroll,350,20
-79,1000,Slumber Scroll,350,20
-80,1000,Swift Foe Scroll,350,20
-81,1000,Vacuum Slash Scrl,350,20
-82,3000,Bankruptcy Scroll,1050,20
-83,3000,Expulsion Scroll,1050,20
-84,3000,Lost Scroll,1050,20
-85,3000,Sanctuary Scroll,1050,20
-86,5000,Blank Scroll,1750,20
-87,10000,Extinction Scroll,3500,20
-88,2000,Bunch Bracelet,700,30
-89,2000,Can. Arm Bracelet,700,30
-90,2000,Inacc. Bracelet,700,30
-91,2000,Strength Bracelet,700,30
-92,3000,Alert Bracelet,1050,30
-93,3000,Anti-Cnf. Bracelet,1050,30
-94,3000,Anti-Crs. Bracelet,1050,30
-95,3000,Cleansing Bracelet,1050,30
-96,3000,Critical Bracelet,1050,30
-97,3000,Dozer Bracelet,1050,30
-98,3000,Mojo Bracelet,1050,30
-99,3000,Monster Summoner,1050,30
-100,3000,Staunch Bracelet,1050,30
-101,3000,Trap Bracelet,1050,30
-102,5000,Alleyway Bracelet,1750,30
-103,5000,Blink Bracelet,1750,30
-104,5000,Explosion Bracelet,1750,30
-105,5000,Heal Bracelet,1750,30
-106,5000,Item Detector,1750,30
-107,5000,Itemphobic,1750,30
-108,5000,Monster Detector,1750,30
-109,5000,Monsterphobic,1750,30
-110,5000,Nonary Bracelet,1750,30
-111,5000,Wall Clip Bracelet,1750,30
-112,5000,Waterwalk Bracelet,1750,30
-113,10000,Anti-Parry Brce.,3500,30
-114,10000,Floating Bracelet,3500,30
-115,10000,Growth Bracelet,3500,30
-116,10000,Time Stop Bracelet,3500,30
-117,30000,Identify Bracelet,10500,30
-118,30000,Night Ward,10500,30
-119,30000,Scout Bracelet,10500,30
-120,30000,Trapper Bracelet,10500,30
-121,50000,VIP Bracelet,17500,30
+1,10,Weeds,10,3,0
+2,50,Fine Grass,10,17,0
+3,50,Herb,10,17,0
+4,100,Antidote Grass,10,35,0
+5,100,Otogiriso,10,35,0
+6,100,Poison Grass,10,35,0
+7,100,Warp Grass,10,35,0
+8,200,Heal Grass,10,70,0
+9,300,Blinding Grass,10,105,0
+10,300,Confusion Grass,10,105,0
+11,300,Nymph Grass,10,105,0
+12,300,Perception Grass,10,105,0
+13,300,Power Up Grass,10,105,0
+14,300,Stomach Expander,10,105,0
+15,300,Stomach Shrinker,10,105,0
+16,300,Swift Grass,10,105,0
+17,300,Upgrade Seed,10,105,0
+18,500,Dracon Grass,10,175,0
+19,500,Dragon Grass,10,175,0
+20,500,Life Grass,10,175,0
+21,500,Rage Grass,10,175,0
+22,500,Sleepy Grass,10,175,0
+23,500,Strength Grass,10,175,0
+24,1000,Gut Grass,10,350,0
+25,1000,Revival Grass,10,350,0
+26,1500,Repeat Grass,10,525,0
+27,1500,Undo Grass,10,525,0
+28,2000,Amnesia Grass,10,700,0
+29,2000,Cheery Grass,10,700,0
+30,2000,Imabikiso,10,700,0
+31,2000,Invincible Grass,10,700,0
+32,2000,Unlucky Seed,10,700,0
+33,5000,Angel Seed,10,1750,0
+34,5000,SuperUnlucky Seed,10,1750,0
+35,10,Wet Scroll,20,3,0
+36,10,Piece of Paper,20,3,0
+37,100,Commend. Letter,20,35,0
+38,100,Escape Scroll,20,35,0
+39,100,Light Scroll,20,35,0
+40,100,Navigation Scroll,20,35,0
+41,100,Oil Scroll,20,35,0
+42,100,Recommend. Letter,20,35,0
+43,200,Identify Scroll,20,70,0
+44,300,Collection Scroll,20,105,0
+45,300,Gathering Scroll,20,105,0
+46,300,Squid Sushi Scroll,20,105,0
+47,500,Blessing Scroll,20,175,0
+48,500,Coupon Scroll,20,175,0
+49,500,Curse Scroll,20,175,0
+50,500,Darth Scroll,20,175,0
+51,500,Earth Scroll,20,175,0
+52,500,Exorcism Scroll,20,175,0
+53,500,Extraction Scroll,20,175,0
+54,500,Fate Scroll,20,175,0
+55,500,Mate Scroll,20,175,0
+56,500,Onigiri Scroll,20,175,0
+57,500,Plating Scroll,20,175,0
+58,500,Pot Dog Scroll,20,175,0
+59,500,Pot God Scroll,20,175,0
+60,500,Sale Scroll,20,175,0
+61,500,Tag Scroll,20,175,0
+62,800,Attraction Scroll,20,280,0
+63,800,Desert Scroll,20,280,0
+64,800,Fear Scroll,20,280,0
+65,800,Grounded Scroll,20,280,0
+66,800,Muzzled Scroll,20,280,0
+67,800,Trap Deletion Scrl,20,280,0
+68,800,Trap Scroll,20,280,0
+69,1000,Arbor Scroll,20,350,0
+70,1000,Confusion Scroll,20,350,0
+71,1000,Dispel Aura Scroll,20,350,0
+72,1000,Fixer Scroll,20,350,0
+73,1000,Gambler’s Scroll,20,350,0
+74,1000,Immunity Scroll,20,350,0
+75,1000,Mnster House Scrl,20,350,0
+76,1000,Night-Day Scroll,20,350,0
+77,1000,Nixer Scroll,20,350,0
+78,1000,Replenish Scroll,20,350,0
+79,1000,Slumber Scroll,20,350,0
+80,1000,Swift Foe Scroll,20,350,0
+81,1000,Vacuum Slash Scrl,20,350,0
+82,3000,Bankruptcy Scroll,20,1050,0
+83,3000,Expulsion Scroll,20,1050,0
+84,3000,Lost Scroll,20,1050,0
+85,3000,Sanctuary Scroll,20,1050,0
+86,5000,Blank Scroll,20,1750,0
+87,10000,Extinction Scroll,20,3500,0
+88,2000,Bunch Bracelet,30,700,0
+89,2000,Can. Arm Bracelet,30,700,0
+90,2000,Inacc. Bracelet,30,700,0
+91,2000,Strength Bracelet,30,700,0
+92,3000,Alert Bracelet,30,1050,0
+93,3000,Anti-Cnf. Bracelet,30,1050,0
+94,3000,Anti-Crs. Bracelet,30,1050,0
+95,3000,Cleansing Bracelet,30,1050,0
+96,3000,Critical Bracelet,30,1050,0
+97,3000,Dozer Bracelet,30,1050,0
+98,3000,Mojo Bracelet,30,1050,0
+99,3000,Monster Summoner,30,1050,0
+100,3000,Staunch Bracelet,30,1050,0
+101,3000,Trap Bracelet,30,1050,0
+102,5000,Alleyway Bracelet,30,1750,0
+103,5000,Blink Bracelet,30,1750,0
+104,5000,Explosion Bracelet,30,1750,0
+105,5000,Heal Bracelet,30,1750,0
+106,5000,Item Detector,30,1750,0
+107,5000,Itemphobic,30,1750,0
+108,5000,Monster Detector,30,1750,0
+109,5000,Monsterphobic,30,1750,0
+110,5000,Nonary Bracelet,30,1750,0
+111,5000,Wall Clip Bracelet,30,1750,0
+112,5000,Waterwalk Bracelet,30,1750,0
+113,10000,Anti-Parry Brce.,30,3500,0
+114,10000,Floating Bracelet,30,3500,0
+115,10000,Growth Bracelet,30,3500,0
+116,10000,Time Stop Bracelet,30,3500,0
+117,30000,Identify Bracelet,30,10500,0
+118,30000,Night Ward,30,10500,0
+119,30000,Scout Bracelet,30,10500,0
+120,30000,Trapper Bracelet,30,10500,0
+121,50000,VIP Bracelet,30,17500,0

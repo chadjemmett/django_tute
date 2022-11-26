@@ -1,15 +1,25 @@
-{% if items %}
-<div>
-    {% for i in items %}
-    <ul>
-    <li>Name:  {{ i.item_name }} </li>
-    <li>buy price:  {{ i.buy_price }} </li>
-    <li>sell Price:  {{ i.sell_price }} </li>
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<link rel="stylesheet" href="{% static 'shiren/style.css' %}">
+<form action="{% url 'shiren:check' %}" method="POST">
+     {% csrf_token %}
+{% for i in items %}
+ <div class="card text-center" style="width: 100%;">
+     {% if i.found %}
+     <h5 class="card-title alert alert-success">{{ i.item_name }}</h5>
+     {% else %}
+     <h5 class="card-title alert alert-dark">{{ i.item_name }}</h5>
+     {% endif %}
+     <p class="card-text"> Sell: {{ i.sell_price}}</p>
+     <p class="card-text"> Buy: {{ i.buy_price}}</p>
+     {% if i.found %}
+     <input style="width: 30px; height: 30px;"name="item_id"  type="checkbox" value={{ i.id }} checked >
+     {% endif %}
 
-    </ul>
-    {% endfor %}
+     </div>
 </div>
-{% else %}
-    No items
-{% endif %}
-
+{% endfor %}
+{% buttons type="submit" submit="check" %}{% endbuttons %}
+</form>

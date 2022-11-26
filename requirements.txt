@@ -4,7 +4,14 @@ dj-database-url==1.0.0
 Django==4.1.1
 django-appconf==1.0.5
 django-bootstrap-v5==1.0.11
+Django-Integrator==1.1.1.1
+django-memdb==0.0.6
+django-query-signals==0.0.2
+Faker==15.3.2
+gunicorn==20.1.0
+python-dateutil==2.8.2
 python-dotenv==0.21.0
 six==1.16.0
 soupsieve==2.3.2.post1
 sqlparse==0.4.2
+toposort==1.7

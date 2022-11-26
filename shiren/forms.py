@@ -1,5 +1,6 @@
 from django import forms
 from bootstrap5.widgets import RadioSelectButtonGroup
+from .models import Item
 
 class ItemForm(forms.Form):
     TRANSACTION = [
@@ -27,3 +28,7 @@ class ItemForm(forms.Form):
             widget=RadioSelectButtonGroup) 
 
     price = forms.IntegerField()
+
+class ListForm(forms.Form):
+    checkbox_thing = forms.BooleanField(required=False, widget=forms.CheckboxInput())
+
