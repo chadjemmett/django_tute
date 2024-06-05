@@ -22,6 +22,15 @@
     {%   bootstrap_form form  %}
     {%  buttons submit="Check Price"  %}{% endbuttons %}
 </form>
+{% if data  %}
+    {% for i in data  %}
+            <p>{{ i }}</p>
+        {% endfor %}
+{% else %}
+    <p>Nope</p>
+{% endif %}
+
+
 </div>
 
 

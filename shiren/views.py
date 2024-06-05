@@ -8,25 +8,23 @@ from django.urls import reverse
 from django.views import generic
 from .forms import ItemForm, ListForm
 
-# Create your views here.
+# Create your views herte.
 
 def index(request):
     form = ItemForm()
-    return render(request, "shiren/index.html",{'form': form } )
+    found_items = Item.objects.filter(found=True)
+    return render(request, "shiren/index.html",{'form': form, 'data': found_items, 'thing': "hello world" } )
 
 
 def list(request):
     value  = request.POST.get('price')
     transaction = request.POST.get('transaction')
     item_type = request.POST.get('item_type')
-    print(value, transaction, item_type)
     if transaction == 'buy':
-        print("This is checking the buying whatnot")
         items = Item.objects.filter(item_type=item_type).filter(buy_price=value)
     if transaction == 'sell':
         items = Item.objects.filter(item_type=item_type).filter(sell_price=value)
     form = ListForm()
-    print(items)
 
     context ={'items': items, "form": form}
     return render(request, "shiren/list_items.html", context)
@@ -40,9 +38,9 @@ def check(request):
         thing.save()
 
     form = ItemForm()
-    print(form)
+    found_items = Item.objects.filter(found=True)
 
-    context = {'form': form}
+    context = {'form': form, 'data': found_items}
 
 
     
