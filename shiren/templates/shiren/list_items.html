@@ -16,6 +16,9 @@
      <p class="card-text"> Buy: {{ i.buy_price}}</p>
      {% if i.found %}
      <input style="width: 30px; height: 30px;"name="item_id"  type="checkbox" value={{ i.id }} checked >
+     {% else %}
+        
+     <input style="width: 30px; height: 30px;"name="item_id"  type="checkbox" value={{ i.id }} >
      {% endif %}
 
      </div>

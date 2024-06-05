@@ -39,8 +39,11 @@ def check(request):
         thing.found = True
         thing.save()
 
-    context = {'items': items}
+    form = ItemForm()
+    print(form)
+
+    context = {'form': form}
 
 
     
-    return render(request, "shiren/list_items.html", context)
+    return render(request, "shiren/index.html", context)
