@@ -1,5 +1,4 @@
-from django.shortcuts import render
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from django.template import loader
 from django.http import HttpResponse, Http404, HttpResponseRedirect
@@ -44,4 +43,9 @@ def check(request):
 
 
     
-    return render(request, "shiren/index.html", context)
+    return redirect("index", context)
+
+def reset(request):
+    print("Working reset buttons")
+    form = ItemForm()
+    return render(request, "shiren/index.html", {"form": form})

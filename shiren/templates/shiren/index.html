@@ -15,6 +15,9 @@
 {% bootstrap_css %}
 {% bootstrap_javascript %}
 
+<form action="{% url 'shiren:reset'%}" method="posts">
+    {%  buttons submit="Reset"  %}{% endbuttons %}
+</form>
 {{ static }}
 <div class="sm reddish">
 <form  action="{% url 'shiren:list' %}" method="post">
