@@ -40,7 +40,7 @@ def check(request):
     found_items = Item.objects.filter(found=True)
 
     context = {'form': form, 'data': found_items}
-    return redirect('index', kwargs={"form": form} )
+    return redirect('/shiren', kwargs={"form": form} )
 
 def reset(request):
     Item.objects.all().update(found=False)
