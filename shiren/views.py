@@ -40,12 +40,10 @@ def check(request):
     found_items = Item.objects.filter(found=True)
 
     context = {'form': form, 'data': found_items}
-
-
-    
-    return redirect("index", context)
+    return redirect('index', kwargs={"form": form} )
 
 def reset(request):
-    print("Working reset buttons")
+    Item.objects.all().update(found=False)
+
     form = ItemForm()
-    return render(request, "shiren/index.html", {"form": form})
+    return redirect("/shiren")
