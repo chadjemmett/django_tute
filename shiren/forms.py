@@ -10,9 +10,9 @@ class ItemForm(forms.Form):
     TYPE = [
             (10,'herb'), 
             (20, 'scroll'), 
-            (30, 'staff'), 
+            (30, 'bracelet'),
             (40, 'jar'), 
-            (50, 'bracelet'),
+            (50, 'staff'), 
             ]
 
     transaction  = forms.ChoiceField(

@@ -24,7 +24,6 @@ def list(request):
     if transaction == 'sell':
         items = Item.objects.filter(item_type=item_type).filter(sell_price=value)
     form = ListForm()
-
     context ={'items': items, "form": form}
     return render(request, "shiren/list_items.html", context)
 
