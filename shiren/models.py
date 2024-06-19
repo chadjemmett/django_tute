@@ -16,7 +16,7 @@ class Item(models.Model):
     item_name = models.CharField(max_length=256)
     item_type = models.IntegerField(choices=TYPE)
     found = models.BooleanField(default=False, blank=True)
-    price = models.ForeignKey(Price, on_delete=models.CASCADE)
+    price = models.ManyToManyField(Price)
 
     def __str__(self):
         return f"{self.item_name}, {self.item_type}"
