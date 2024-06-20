@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from django.template import loader
 from django.http import HttpResponse, Http404, HttpResponseRedirect
-from .models import Item
+from .models import Item, Price
 from django.urls import reverse
 from django.views import generic
 from .forms import ItemForm, ListForm
@@ -12,17 +12,18 @@ from .forms import ItemForm, ListForm
 def index(request):
     form = ItemForm()
     found_items = Item.objects.filter(found=True)
-    return render(request, "shiren/index.html",{'form': form, 'data': found_items, 'thing': "hello world" } )
+    return render(request, "shiren/index.html",{'form': form, 'data': found_items} )
 
 
 def list(request):
     value  = request.POST.get('price')
-    transaction = request.POST.get('transaction')
-    item_type = request.POST.get('item_type')
-    if transaction == 'buy':
-        items = Item.objects.filter(item_type=item_type).filter(buy_price=value)
-    if transaction == 'sell':
-        items = Item.objects.filter(item_type=item_type).filter(sell_price=value)
+    p = Price.objects.get(price=value)
+    # transaction = request.POST.get('transaction')
+    # item_type = request.POST.get('item_type')
+    # if transaction == 'buy':
+    items = Item.objects.filter(price=p)
+    # if transaction == 'sell':
+    #     items = Item.objects.filter(item_type=item_type).filter(sell_price=value)
     form = ListForm()
     context ={'items': items, "form": form}
     return render(request, "shiren/list_items.html", context)
